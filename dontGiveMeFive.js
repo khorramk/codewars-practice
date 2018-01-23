@@ -1,25 +1,24 @@
 function dontGiveMeFive(start, end)
 {
+  //write a array to put all the values your gonna filter
 var marray = [];
-var regex = /5/g;
+//use a for loop to count the numbers and seearch
 for(i=start; i <= end; i++){
-  
+  //use a variable to convert the values to string
   var fin = i.toString();
-  var repl = fin.replace(regex, '');
-
-  if(repl){
-    marray.push(repl);
-     
-  }
+ //use a string method to search for the correct values
+  var ser = fin.endsWith('5');
+  
+//check whether it is not five or ser
+  if(!ser){
+    //if correct put the values in array
+    marray.push(fin);
+  }  
+ 
   
 }
-if (marray.length > 10){
-  return marray.length-1;
-}else{
-  return marray.length;
+//call the array with length
+return marray.length;
 }
 
-
-}
-
-dontGiveMeFive(-1,13);
+dontGiveMeFive(4,17);
